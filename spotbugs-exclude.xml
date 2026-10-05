@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <!--
+    EI_EXPOSE_REP2: SpotBugs flags constructors that store a reference to a mutable object. Here it
+    fires on every Spring bean that receives its collaborators (services, repositories, templates)
+    by constructor injection, which is the intended pattern and cannot be defensively copied.
+  -->
+  <Match>
+    <Bug pattern="EI_EXPOSE_REP2" />
+  </Match>
+</FindBugsFilter>
